@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+    <node pkg="step1" type="control.py" name="control" output="screen" ></node>
+    <node pkg="step1" type="mission.py" name="mission"></node>
+
+    <include file="$(find turtlebot3_gazebo)/launch/turtlebot3_empty_world.launch"></include>
+    
+    <include file="$(find turtlebot_rviz_launchers)/launch/view_robot.launch"></include>
+
+    <!-- <include file="$(find wall_follower)/launch/turtlebot3_big_wall.launch">         -->
+    <!-- </include> -->
+</launch>
